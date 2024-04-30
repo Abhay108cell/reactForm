@@ -4,7 +4,7 @@ export default function Form(){
   let [fullName, setFullName] = useState("")
 
   let handleNameChange = (e) =>{
-    console.log(e.target);
+    setFullName(e.target.value);
   } 
   
   return(
