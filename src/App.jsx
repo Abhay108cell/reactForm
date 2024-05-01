@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Form from './Form'
+import CommentForm from './commentForm'
 import './App.css'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <Form />
+      <CommentForm/>
     </>
   )
 }
