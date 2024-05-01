@@ -1,8 +1,11 @@
 import { useState } from "react"
 
 export default function Form(){
-  let [fullName, setFullName] = useState("")
-  let [userName, setUserName] = useState("")
+  let [formData, setFormData] = useState({
+    fullName: "",
+    userName:  ""
+  })
+  
 
   let handleNameChange = (e) =>{
     setFullName(e.target.value);
