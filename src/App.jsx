@@ -1,13 +1,13 @@
 import { useState } from 'react'
-import CommentForm from './commentForm'
 import './App.css'
+import CommentForm from './commentForm'
 
 function App() {
   
 
   return (
     <>
-      <CommentForm/>
+     <CommentForm />
     </>
   )
 }
