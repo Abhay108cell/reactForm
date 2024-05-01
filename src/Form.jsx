@@ -16,11 +16,18 @@ export default function Form(){
 
   let handleInputChange=(event)=>{
     let fieldName = event.target.name
-    console.log(fieldName);
+    let newValue = event.target.value
+   setFormData((currData)=>{
+    currData[fieldName]=newValue;
+     return {...currData}
+   })
   }
   
+  let  submitHandler= (event) =>{
+    event.preventDefault()
+  }
   return(
-    <form>
+    <form onSubmit={submitHandler}>
       <label htmlFor="fullName">Full Name</label> 
       <br />
       <input placeholder="enter your name" type="text"  value={formData.fullName} name="fullName" onChange={handleInputChange} id="fullName"/><br/>
