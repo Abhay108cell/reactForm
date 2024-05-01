@@ -7,22 +7,27 @@ export default function Form(){
   })
   
 
-  let handleNameChange = (e) =>{
-    setFullName(e.target.value);
-  } 
-  let handleUserName = (e) =>{
-    setUserName(e.target.value);
-  } 
+  // let handleNameChange = (e) =>{
+  //   setFullName(e.target.value);
+  // } 
+  // let handleUserName = (e) =>{
+  //   setUserName(e.target.value);
+  // } 
+
+  let handleInputChange=(event)=>{
+    let fieldName = event.target.name
+    console.log(fieldName);
+  }
   
   return(
     <form>
       <label htmlFor="fullName">Full Name</label> 
       <br />
-      <input placeholder="enter your name" type="text"  value={fullName} onChange={handleNameChange}  id="fullName"/><br/>
+      <input placeholder="enter your name" type="text"  value={formData.fullName} name="fullName" onChange={handleInputChange} id="fullName"/><br/>
       <br />
       <label htmlFor="username">user Name</label> 
       <br />
-      <input placeholder="enter username" type="text"  value={userName} onChange={handleUserName}  id="username"/><br/>
+      <input placeholder="enter username" type="text"  value={formData.userName} name="userName" onChange={handleInputChange} id="username"/><br/>
       <br />
       <br />
       <br />
