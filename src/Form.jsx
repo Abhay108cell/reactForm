@@ -3,7 +3,8 @@ import { useState } from "react"
 export default function Form(){
   let [formData, setFormData] = useState({
     fullName: "",
-    userName:  ""
+    userName:  "",
+    password:""
   })
   
 
@@ -18,13 +19,18 @@ export default function Form(){
     let fieldName = event.target.name
     let newValue = event.target.value
    setFormData((currData)=>{
-    currData[fieldName]=newValue;
-     return {...currData}
+     return {...currData,[fieldName] : newValue}
    })
   }
   
   let  submitHandler= (event) =>{
+    console.log(formData);
     event.preventDefault()
+    setFormData({
+      fullName: "",
+      userName:  "",
+      password:""
+    })
   }
   return(
     <form onSubmit={submitHandler}>
@@ -35,6 +41,10 @@ export default function Form(){
       <label htmlFor="username">user Name</label> 
       <br />
       <input placeholder="enter username" type="text"  value={formData.userName} name="userName" onChange={handleInputChange} id="username"/><br/>
+      <br />
+      <label htmlFor="password">password</label> 
+      <br />
+      <input placeholder="enter password" type="password"  value={formData.password} name="password" onChange={handleInputChange} id="password"/><br/>
       <br />
       <br />
       <br />
