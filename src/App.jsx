@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Counter from  './Counter';
 import './App.css'
 
 
@@ -6,7 +7,7 @@ import './App.css'
 function App() {
   return (
     <>
-      
+      <Counter />
     </>
   )
 }
