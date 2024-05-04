@@ -1,13 +1,14 @@
 import { useState } from 'react'
-import Counter from  './Counter';
+
 import './App.css'
+import Joker from './Joker'
 
 
 
 function App() {
   return (
     <>
-      <Counter />
+     <Joker />
     </>
   )
 }
